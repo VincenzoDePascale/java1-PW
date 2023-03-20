@@ -87,16 +87,58 @@ public class Main {
             input.nextLine();
             switch (e) {
                 case 1:
-                    for (int i = 0; i < lista.length; i++) {
-                        System.out.println(lista[i].getNome());
-                    }
+                    listFile();
                     break;
                 case 2:
                     createArray();
                     break;
                 case 3:
-                    System.out.println("da settare");
+                    readOneFile();
                     break;
             }
         }
+
+        public static void listFile() {
+            for (int i = 0; i < lista.length; i++) {
+                System.out.println(lista[i].getNome());
+            }
+        }
+
+        public static void readOneFile() {
+            Scanner input = new Scanner(System.in);
+            System.out.println("dimmi quale file vuoi leggere i dati\n premi il numero relativo al file da leggere\n i numeri vanno da 1 a 5\n oppure premi 6 per rillegere quali file hai salvato");
+            int e = input.nextInt();
+            input.nextLine();
+            switch (e) {
+                case 1:
+                    System.out.println(lista[e].getNome());
+                    //readDataFile();
+                    break;
+                case 2:
+                    System.out.println(lista[e].getNome());
+                    //readDataFile();
+                    break;
+                case 3:
+                    System.out.println(lista[e].getNome());
+                    //readDataFile();
+                    break;
+                case 4:
+                    System.out.println(lista[e].getNome());
+                    //readDataFile();
+                    break;
+                case 5:
+                    System.out.println(lista[e].getNome());
+                    //readDataFile();
+                    break;
+                case 6:
+                    listFile();
+                    break;
+
+            }
+
+        }
+
+        //non so come impostare lo switch per far si che per ogni caso possibile posa leggere i singoli dati.
+
+
     }
